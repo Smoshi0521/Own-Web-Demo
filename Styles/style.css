@@ -5,14 +5,13 @@ body {
 body header {
   background-image: url(../Pictures/derevo-coffee-kofe.jpg);
   background-size: cover;
-  border: 3px solid red;
-  height: 800px;
+  height: 730px;
 }
 
 body header .header-container {
-  border: 3px solid blue;
   width: 100%;
   height: 200px;
+  margin-top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,17 +24,32 @@ body header .header-container {
 }
 
 body header .header-container .logo-container {
-  border: 3px solid red;
-  width: 400px;
+  width: 300px;
   height: 180px;
   margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header .header-container .logo-container #logo-img {
+  width: 200px;
+  height: 200px;
 }
 
 body header .header-container .nav-container {
-  border: 3px solid red;
-  width: 400px;
-  height: 150px;
-  margin-right: 150px;
+  border-bottom: 5px solid black;
+  width: 80%;
+  height: 70px;
+  margin-top: -50px;
+  margin-left: 50px;
+  margin-right: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,32 +63,136 @@ body header .header-container .nav-container {
 
 body header .header-container .nav-container a {
   color: white;
-  font-size: 15px;
+  font-size: 23px;
   margin: 20px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: none;
 }
 
-body header .header-container .nav-container #coffee-container {
-  border: 3px solid black;
+body header .header-container .nav-container a:hover {
+  background-color: #D2B48C;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body header .header-container .nav-container #menu-container {
+  width: 120psx;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+body header .header-container .nav-container #menu-container #menu-btn {
+  color: white;
+  border-radius: 20px;
+  height: 40px;
   width: 100px;
-  height: 100px;
-  margin-left: 50px;
-}
-
-body header .header-container .nav-container #coffee-container #coffee-btn {
-  border-radius: 40px;
-  height: 50px;
-  font-size: 15px;
+  font-size: 23px;
   position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 }
 
-body header .header-container .nav-container #coffee-container #coffee-content {
+body header .header-container .nav-container #menu-container #menu-btn:hover {
+  background-color: #D2B48C;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body header .header-container .nav-container #menu-container #menu-content {
   position: absolute;
   border: 3px solid blue;
   height: 200px;
   width: 200px;
+  background-color: #D2B48C;
+  display: none;
 }
 
-body header .header-container .nav-container #coffee-container #coffee-content a {
+body header .header-container .nav-container #menu-container #menu-content a {
   display: block;
+  font-size: 20px;
+  color: white;
+  border-radius: 0px;
+  padding: 0px 0px;
+  width: 0;
+  text-decoration: none;
+}
+
+body header .header-container .nav-container #menu-container #menu-content a:hover {
+  color: red;
+}
+
+body header .header-container #menu-bar {
+  display: none;
+}
+
+body header .header-container label {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  body header .header-container {
+    border-bottom: 5px solid black;
+    width: 72%;
+    height: 100px;
+    margin-top: 0px;
+    margin-left: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body header .header-container .logo-container {
+    position: absolute;
+    left: -30px;
+    top: 0px;
+  }
+  body header .header-container .logo-container #logo-img {
+    width: 180px;
+    height: 180px;
+  }
+  body header .header-container .nav-container {
+    border: 3px solid green;
+    width: 200px;
+    height: 300px;
+    line-height: 20px;
+    position: absolute;
+    top: 28%;
+    right: 100px;
+    display: none;
+  }
+  body header .header-container .nav-container a {
+    display: block;
+  }
+  body header .header-container #menu-container {
+    display: block;
+  }
+  body header .header-container label {
+    display: initial;
+    font-size: 30px;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    padding: 5px 12px;
+  }
+  body header .header-container label:hover {
+    background-color: #D2B48C;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body header .header-container #menu-bar:checked ~ .nav-container {
+    display: initial;
+  }
 }
 /*# sourceMappingURL=style.css.map */
